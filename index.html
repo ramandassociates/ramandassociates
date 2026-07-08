@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ram Arnav Associates — Accounting, Taxation &amp; Advisory</title>
+<meta name="description" content="Ram Arnav Associates offers accounting, bookkeeping, GST, tax planning, DPR preparation, financial analysis, payroll and virtual CFO advisory services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#B9D9C2;
+    --sage-soft:#DCEBE1;
+    --cream:#FBFAF3;
+    --cream-yellow:#F2F0C6;
+    --deep-green:#3B5647;
+    --mid-green:#5F7E6C;
+    --line:rgba(59,86,71,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost', sans-serif;
+    color:var(--deep-green);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  header.topbar{
+    position:sticky; top:0; z-index:10;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand .mono{width:34px; height:34px;}
+  .brand-name{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.5px;
+  }
+  nav ul{display:flex; gap:28px; list-style:none;}
+  nav a{
+    font-size:14px;
+    letter-spacing:0.3px;
+    color:var(--mid-green);
+  }
+  nav a:hover{color:var(--deep-green);}
+
+  .hero{
+    background:var(--sage-soft);
+    padding:72px 0 64px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .mono-lg{width:84px; height:84px; margin:0 auto 22px;}
+  .hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(32px, 5vw, 48px);
+    letter-spacing:1.5px;
+    margin-bottom:12px;
+  }
+  .hero .tagline{
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--mid-green);
+    font-weight:500;
+    margin-bottom:20px;
+  }
+  .hero p.lede{
+    max-width:520px;
+    margin:0 auto 32px;
+    font-size:16px;
+    color:var(--mid-green);
+  }
+  .btn-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:2px;
+    font-size:14px;
+    letter-spacing:0.5px;
+    font-weight:500;
+  }
+  .btn-primary{background:var(--deep-green); color:var(--cream);}
+  .btn-primary:hover{background:#2C4437;}
+  .btn-secondary{border:1px solid var(--deep-green); color:var(--deep-green);}
+  .btn-secondary:hover{background:var(--deep-green); color:var(--cream);}
+
+  .section{padding:64px 0;}
+  .section-head{text-align:center; margin-bottom:40px;}
+  .eyebrow{
+    font-size:12px; letter-spacing:2.5px; text-transform:uppercase;
+    color:var(--mid-green); font-weight:500; margin-bottom:8px;
+  }
+  .section-head h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(26px, 4vw, 34px);
+  }
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:22px;
+  }
+  .service-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:24px 22px;
+  }
+  .service-card .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    color:var(--sage);
+    -webkit-text-stroke:1px var(--deep-green);
+    margin-bottom:10px;
+    display:block;
+  }
+  .service-card h3{
+    font-size:16px;
+    font-weight:500;
+    margin-bottom:8px;
+    letter-spacing:0.2px;
+  }
+  .service-card p{
+    font-size:13.5px;
+    color:var(--mid-green);
+  }
+
+  .team{background:var(--sage-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:24px;
+  }
+  .team-card{
+    background:var(--cream);
+    border-radius:4px;
+    padding:28px 26px;
+    text-align:center;
+  }
+  .avatar{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--deep-green); color:var(--cream-yellow);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; font-weight:700; font-size:22px;
+    margin:0 auto 16px;
+  }
+  .team-card h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px; font-weight:600; margin-bottom:6px;
+  }
+  .team-card .cred{font-size:13.5px; color:var(--mid-green); margin-bottom:4px;}
+  .team-card .exp{font-size:12.5px; color:var(--mid-green); font-style:italic; margin-bottom:14px;}
+  .team-card .mobile{
+    font-size:14px; font-weight:500;
+    border-top:1px solid var(--line);
+    padding-top:14px;
+  }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:24px;
+    text-align:center;
+  }
+  .contact-item .label{
+    font-size:12px; letter-spacing:2px; text-transform:uppercase;
+    color:var(--mid-green); margin-bottom:8px; font-weight:500;
+  }
+  .contact-item .value{font-size:15.5px; font-weight:500;}
+
+  footer{
+    padding:28px 0;
+    text-align:center;
+    font-size:12.5px;
+    color:var(--mid-green);
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:600px){
+    nav ul{gap:16px;}
+    nav a{font-size:12.5px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mono" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="47" fill="#3B5647"/>
+        <text x="38" y="62" font-family="Cormorant Garamond, serif" font-size="46" font-weight="700" fill="#F2F0C6" text-anchor="middle">R</text>
+        <text x="62" y="62" font-family="Cormorant Garamond, serif" font-size="46" font-weight="700" fill="#B9D9C2" text-anchor="middle">A</text>
+        <line x1="30" y1="72" x2="70" y2="72" stroke="#F2F0C6" stroke-width="1.2"/>
+      </svg>
+      <span class="brand-name">Ram Arnav Associates</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <svg class="mono-lg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="47" fill="#3B5647"/>
+      <text x="38" y="62" font-family="Cormorant Garamond, serif" font-size="46" font-weight="700" fill="#F2F0C6" text-anchor="middle">R</text>
+      <text x="62" y="62" font-family="Cormorant Garamond, serif" font-size="46" font-weight="700" fill="#B9D9C2" text-anchor="middle">A</text>
+      <line x1="30" y1="72" x2="70" y2="72" stroke="#F2F0C6" stroke-width="1.2"/>
+    </svg>
+    <h1>Ram Arnav Associates</h1>
+    <div class="tagline">Accounting &middot; Taxation &middot; Advisory</div>
+    <p class="lede">Dependable accounting, compliance, and advisory support for businesses and individuals across Hyderabad and Vijayawada.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="tel:+918790696906">Call us</a>
+      <a class="btn btn-secondary" href="mailto:ramandassociates.finance@gmail.com">Email us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Our services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Accounting &amp; Bookkeeping</h3>
+        <p>Day-to-day books, ledger maintenance, and financial record-keeping for businesses of every size.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Business Registration &amp; Licensing</h3>
+        <p>Company and LLP incorporation, GST, FSSAI, IEC, MSME, and other statutory registrations.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>GST, TDS &amp; Statutory Filings</h3>
+        <p>Timely GST returns, TDS filings, and other periodic statutory compliance work.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>Tax Planning &amp; Compliance</h3>
+        <p>Income tax planning and filing support for individuals and businesses.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">05</span>
+        <h3>DPR Preparation</h3>
+        <p>Detailed project reports to support loan and project financing applications.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">06</span>
+        <h3>Financial Analysis &amp; MIS</h3>
+        <p>Management information systems, ageing trackers, and periodic financial reporting.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">07</span>
+        <h3>Payroll &amp; HR Advisory</h3>
+        <p>Payroll processing, PF/ESI compliance, and HR advisory support.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">08</span>
+        <h3>Virtual CFO Advisory</h3>
+        <p>Strategic financial guidance, cash-flow planning, and forecasting for growing businesses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section team" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who we are</div>
+      <h2>Our team</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar">N</div>
+        <h3>Naveen</h3>
+        <div class="cred">B.Com &middot; CA Final (Pursuing)</div>
+        <div class="exp">10+ years of professional experience</div>
+        <div class="mobile"><a href="tel:+918790696906">+91 87906 96906</a></div>
+      </div>
+      <div class="team-card">
+        <div class="avatar">K</div>
+        <h3>K Mani Chandana</h3>
+        <div class="cred">CA Final (Pursuing)</div>
+        <div class="exp">&nbsp;</div>
+        <div class="mobile"><a href="tel:+916309123982">+91 63091 23982</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Contact us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:ramandassociates.finance@gmail.com">ramandassociates.finance@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Naveen</div>
+        <div class="value"><a href="tel:+918790696906">+91 87906 96906</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">K Mani Chandana</div>
+        <div class="value"><a href="tel:+916309123982">+91 63091 23982</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        <div class="value">Vijayawada, Andhra Pradesh</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Ram Arnav Associates. Accounting, Taxation &amp; Advisory.
+</footer>
+
+</body>
+</html>
